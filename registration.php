@@ -7,7 +7,7 @@
           <br><br>
        confirm_password:<input type="text"name="confirm_password">
           <br><br>
-             <input type="submit" name="submit" value="Submit">  
-
-
+       <h3>image</h3>
+       	  <input type="file" name="fileToUpload" id="fileToUpload">
+	   <input type="submit" name="submit" value="Submit">  
 </form>
