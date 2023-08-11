@@ -14,7 +14,7 @@ echo "<br>";
 $newName=$_POST['name'];
 $newPassword=$_POST['password'];
 $userId=$_POST['id'];
-echo "=========".$userId;
+echo $userId;
 // Upload image
 $target_file="images/".$_FILES['fileToUpload']['name'];
 move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);

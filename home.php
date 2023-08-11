@@ -22,5 +22,6 @@ if (isset($_COOKIE['name'])) {
 <?php 
 } else{
     header("Location: login.php");
-}
+} 
+
 ?>

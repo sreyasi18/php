@@ -35,6 +35,7 @@ $result = $conn->query($sql);
                         <th>Password</th>
                         <th>Image</th>
                         <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -65,11 +66,20 @@ if ($result->num_rows > 0) {
              header("Location: user_update.php");
              exit(); // Make sure to exit to prevent further script execution
          }
+         
+         echo '<td><a href="delete_profile.php?id=' . $row["id"] . '">delete ' . $row["id"] . '</a></td>';
+         
+         if(isset($_GET['id'])) {
+             
+             header("Location: delete_profile.php");
+             exit();
+         }
+         
         
         echo '</tr>';
     }
 } else {
-    echo '<tr><td colspan="4">0 results</td></tr>';
+    echo '<tr><td colspan="5">0 results</td></tr>';
 }
 $conn->close();
 ?> </tbody>
